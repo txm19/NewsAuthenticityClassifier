@@ -32,34 +32,27 @@ Built with **Python, Flask, scikit-learn, and ngrok** for deployment.
 ```bash
 git clone https://github.com/txm19/NewsAuthenticityClassifier.git
 cd NewsAuthenticityClassifier
-Installation
+```
 
-bash
-Copy
-Edit
+**Installation**
+```bash
 pip install -r requirements.txt
-Run the App
+```
 
-bash
-Copy
-Edit
+**Run the App**
+```bash
 python app.py
-The app will be available at:
-👉 http://127.0.0.1:5000
+```
 
-Live Demo (with ngrok)
-
-bash
-Copy
-Edit
+## 🌍 Deployment
+```bash
 ngrok http 5000
-You’ll get a shareable link like:
-👉 https://<random-id>.ngrok-free.app
+```
 
-📂 Project Structure
-bash
-Copy
-Edit
+---
+
+## 📂 Project Structure
+```bash
 NewsAuthenticityClassifier/
 │
 ├── app.py                 # Main Flask app
@@ -80,3 +73,18 @@ NewsAuthenticityClassifier/
 ├── vectorizer.pkl         # TF-IDF vectorizer
 │
 └── README.md              # Project documentation
+```
+
+---
+
+## 🧠 Models Used
+
+● Logistic Regression
+
+● Random Forest Classifier
+
+● Gradient Boosting Classifier
+
+
+
+
