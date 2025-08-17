@@ -28,19 +28,18 @@ Built with **Python, Flask, scikit-learn, and ngrok** for deployment.
 
 ## ⚙️ Getting Started
 
-Clone the repository:
-```bash
+**Clone the repository**:
 git clone https://github.com/txm19/NewsAuthenticityClassifier.git
 cd NewsAuthenticityClassifier
 
-Install dependencies:
+**Install dependencies**:
 pip install -r requirements.txt
 
-Run the app:
+**Run the app**:
 python app.py
 
-Visit:
-http://127.0.0.1:5000
+The app will be available at:
+👉 http://127.0.0.1:5000
 
 If you want to share your app publicly:
 ngrok http 5000
