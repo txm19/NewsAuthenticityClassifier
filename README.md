@@ -22,7 +22,7 @@ Built with **Python, Flask, scikit-learn, and ngrok** for deployment.
 ---
 
 ## 📸 Screenshot
-<img src="static/fake.png" width="600">
+<img src="outputimg.png" width="600">
 
 ---
 
