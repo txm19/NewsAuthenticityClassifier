@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Background image */
+            background: url("{{ url_for('static', filename='fake.png') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.85); /* Black rectangle with transparency */
+            border-radius: 16px;
+            padding: 40px;
+            width: 500px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(0, 123, 255, 0.8); /* Blue glow */
+            border: 2px solid rgba(0, 123, 255, 0.9); /* Blue border */
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 25px rgba(0, 123, 255, 0.8);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(0, 123, 255, 1);
+            }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ffffff; /* White title text */
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            resize: none;
+            background-color: #ffffff; /* Inner rectangle stays white */
+            color: #000000;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 25px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #ffffff; /* Result text in white */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📰 News Authenticity Classifier </h1>
+        <form action="/predict" method="post">
+            <textarea name="news" placeholder="Paste your news article here..."></textarea>
+            <br>
+            <button type="submit">Check News</button>
+        </form>
+        {% if result %}
+            <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
